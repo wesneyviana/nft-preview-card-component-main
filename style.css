@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font-size-paragraph: 18px;
+
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#container {
+    background-color: var(--Very-dark-blue-card-BG);
+    max-width: var(--mobile);
+    padding: 20px;
+    border-radius: 10px;   
+}
+/*teste de overlay*/
+#equilibrium {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+#equilibrium > img{
+    width: 100%;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: none;
+}
+.overlay img{
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#equilibrium:hover .overlay {
+    display: block;
+    cursor: pointer;
+}
+/* fim teste*/
+p {
+    font-size: var(--Font-size-paragraph);
+    color: var(--Soft-blue);
+    padding-bottom: 16px;
+}
+h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .5s;
+}
+h1, strong {
+    color: var(--White);
+    margin: 16px 0;
+}
+.text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+.eth {
+    color: var(--Cyan);
+    display: flex;
+    align-items: center;
+}
+.eth span,
+.clock span {
+    padding-left: 10px;
+}
+.clock {
+    color: var(--Soft-blue);
+    display: flex;
+    align-items: center;
+}
+#avatar {
+    display: flex;
+    align-items: center;
+    border-top: 2.5px solid var(--Very-dark-blue-line);
+    padding-top: 1em;
+}
+#avatar strong:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .5s;
+}
+#avatar span {
+    padding-left: 1em;
+    color: var(--Soft-blue);
+    font-weight: 400;
+}
+#avatar img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
