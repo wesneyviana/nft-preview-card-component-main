@@ -16,6 +16,6 @@
 .prettierignore
 
 # minhas modificações #
-*.style-guide
-*.README-template
-*.mentor-index
+*.style-guide.md
+*.README-template.md
+*.mentor-index.html
